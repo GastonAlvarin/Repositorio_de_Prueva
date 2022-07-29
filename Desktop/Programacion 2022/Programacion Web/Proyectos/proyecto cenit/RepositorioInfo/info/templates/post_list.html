@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>Primer pagina web</title>
+        <meta name="descripcion" content="esta es mi primer pagina web" />
+        <meta name="author" content="Gaston Alvarin" />
+    </head>
+        <body>
+                <div>
+                    <h1><a href="/">app1</a></h1>
+                </div>
+                {% for noticia in noticias %}
+                    <div>
+                        <p> publicado: {{ noticia.published_date }}</p>
+                        <h2><a href="">{{ noticia.title }}</a></h2>
+                        <p>{{ noticia.text|linebreaksbr }}</p>
+                    </div>
+                {% endfor %}
+                </div>
+        </body>
+
+
+</html>
